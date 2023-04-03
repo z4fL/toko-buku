@@ -44,7 +44,7 @@ const Carousel = () => {
         <div key={i}>
           <img
             className="w-full h-36 sm:h-[374px] object-cover"
-            src="https://source.unsplash.com/1000x500?book"
+            src={`https://source.unsplash.com/1000x50${i}?book`}
             alt={`gambar buku ${i}`}
           />
         </div>

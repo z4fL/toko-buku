@@ -17,14 +17,14 @@ const Home = ({ title }) => {
           <div className="h-[180px]">
             <img
               className="w-full h-full object-cover"
-              src="https://source.unsplash.com/1000x500?book"
+              src="https://source.unsplash.com/1000x501?book"
               alt="gambar buku 1"
             />
           </div>
           <div className="h-[180px]">
             <img
               className="w-full h-full object-cover"
-              src="https://source.unsplash.com/1000x500?book"
+              src="https://source.unsplash.com/1000x502?book"
               alt="gambar buku 1"
             />
           </div>

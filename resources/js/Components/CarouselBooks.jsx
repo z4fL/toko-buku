@@ -1,3 +1,4 @@
+import { FormatRupiah } from "@/config/formatRupiah";
 import { Link } from "@inertiajs/react";
 import React from "react";
 import Carousel from "react-multi-carousel";
@@ -57,21 +58,23 @@ const CarouselBooks = ({ header, books }) => {
         swipeable
       >
         {books.map((book, index) => (
-          <div key={index} className="mt-4">
+          <div key={index} className="my-4">
             <div className="h-max grid place-items-center font-mono">
-              <div className="bg-white w-40 rounded-md mb-5">
-                <Link>
+              <div className="bg-white w-40 rounded-md">
+                <Link href="#" as="button">
                   <div className="flex justify-center items-center leading-none">
                     <img
                       src={book.img}
                       alt={book.name}
-                      className="w-[165px] h-[200px] object-contain rounded-md shadow-lg bg-white mt-6 transform -translate-y-10 hover:-translate-y-4 transition duration-700"
+                      className="w-36 h-56 rounded-md shadow-lg bg-white mt-6 transform -translate-y-10 hover:-translate-y-4 transition duration-700"
                     />
                   </div>
                   <div className="p-3 pt-0">
                     <p className="mb-1 text-slate-600">{book.author}</p>
                     <p className="mb-1 text-slate-900">{book.name}</p>
-                    <p className="text-sky-700">{book.price}</p>
+                    <p className="text-sky-700">
+                      <FormatRupiah value={book.price} />
+                    </p>
                   </div>
                 </Link>
               </div>

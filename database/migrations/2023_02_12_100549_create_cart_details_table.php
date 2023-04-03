@@ -6,31 +6,31 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('cart_details', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('cart_id');
-            $table->foreignId('book_id');
-            $table->unsignedInteger('qty');
-            $table->unsignedInteger('discount');
-            $table->unsignedInteger('subtotal');
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up(): void
+  {
+    Schema::create('cart_details', function (Blueprint $table) {
+      $table->id();
+      $table->foreignId('cart_id');
+      $table->foreignId('book_id');
+      $table->unsignedInteger('qty');
+      $table->unsignedInteger('discount');
+      $table->unsignedInteger('subtotal');
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('cart_details');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down(): void
+  {
+    Schema::dropIfExists('cart_details');
+  }
 };

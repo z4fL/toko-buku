@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// home routes
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/book', [HomeController::class, 'book'])->name('book');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+// books routes
+Route::prefix('book')->group(function () {
+  Route::get('/recomendations', [HomeController::class, 'bookRecomendations'])->name('recomendations');
+  Route::get('/categories', [HomeController::class, 'bookCategories'])->name('categories');
+});
+
+// guest routes
+Route::middleware('guest')->group(function () {
+  Route::get('/login', [AuthController::class, 'loginView'])->name('login');
+});
+
+// auth routes
+Route::middleware('auth')->group(function () {
+  Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+});
+

@@ -6,28 +6,28 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('book_category', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('book_id');
-            $table->foreignId('category_id');
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up(): void
+  {
+    Schema::create('book_category', function (Blueprint $table) {
+      $table->id();
+      $table->foreignId('book_id');
+      $table->foreignId('category_id');
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('book_category');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down(): void
+  {
+    Schema::dropIfExists('book_category');
+  }
 };
