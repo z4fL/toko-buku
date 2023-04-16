@@ -17,11 +17,12 @@ return new class extends Migration
       $table->id();
       $table->foreignId('user_id');
       $table->string('recipient_name', 100);
-      $table->string('no_hp', 14);
+      // $table->string('no_hp', 14);
+      $table->string('no_hp');
       $table->text('address');
       $table->string('province', 50);
       $table->string('regency', 50);
-      $table->string('district', 50);
+      $table->string('subdistrict', 50);
       $table->string('village', 50);
       $table->string('postal_code', 50);
       $table->timestamps();

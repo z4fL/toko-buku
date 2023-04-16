@@ -1,7 +1,7 @@
 import React from "react";
 
-const BookRecomendations = () => {
+const BookRecommendations = () => {
   return <div>BookRecomendations</div>;
 };
 
-export default BookRecomendations;
+export default BookRecommendations;

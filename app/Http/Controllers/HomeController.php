@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -35,15 +36,16 @@ class HomeController extends Controller
     ]);
   }
 
-  public function bookRecomendations()
+  public function bookRecommendations()
   {
-    return Inertia::render('Books/BookRecomendations', [
+    return Inertia::render('Books/BookRecommendations', [
       "title" => "Recomendations"
     ]);
   }
 
-  public function bookCategories()
+  public function bookCategories(Category $category)
   {
+
     return Inertia::render('Books/BookCategories', [
       "title" => "Categories"
     ]);

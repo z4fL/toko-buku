@@ -20,6 +20,6 @@
     },
     "dependencies": {
         "@heroicons/react": "^2.0.16",
-        "react-multi-carousel": "^2.8.2"
+        "react-multi-carousel": "^2.8.3"
     }
 }

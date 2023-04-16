@@ -16,7 +16,7 @@ return new class extends Migration
     Schema::create('authors', function (Blueprint $table) {
       $table->id();
       $table->string('name');
-      $table->string('social_media', 50);
+      $table->text('social_media');
       $table->timestamps();
     });
   }

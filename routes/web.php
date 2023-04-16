@@ -22,8 +22,8 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 // books routes
 Route::prefix('book')->group(function () {
-  Route::get('/recomendations', [HomeController::class, 'bookRecomendations'])->name('recomendations');
-  Route::get('/categories', [HomeController::class, 'bookCategories'])->name('categories');
+  Route::get('/recomendations', [HomeController::class, 'bookRecommendations'])->name('book.recommendations');
+  Route::get('/categories/{category}', [HomeController::class, 'bookCategories'])->name('book.categories');
 });
 
 // guest routes
@@ -35,4 +35,3 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
   Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 });
-

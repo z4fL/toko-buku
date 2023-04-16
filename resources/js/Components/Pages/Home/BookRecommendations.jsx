@@ -4,40 +4,64 @@ import React from "react";
 const BookRecommendations = () => {
   const recomendedBooks = [
     {
-      img: "https://cdn.gramedia.com/uploads/items/9786230022180_Jujutsukaisen_1__w149_hauto.jpg",
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230034640.jpg",
+      name: "Jujutsu Kaisen vol.0",
+      author: "Gege Akutami",
+      price: "50000",
+    },
+    {
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230022180.jpg",
       name: "Jujutsu Kaisen vol.1",
       author: "Gege Akutami",
       price: "30000",
     },
     {
-      img: "https://cdn.gramedia.com/uploads/items/9786230024399_Jujutsukaisen_2__w149_hauto.jpg",
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230024399.jpg",
       name: "Jujutsu Kaisen vol.2",
       author: "Gege Akutami",
       price: "30000",
     },
     {
-      img: "https://cdn.gramedia.com/uploads/items/WhatsApp_Image_2021-06-18_at_14.16.20__w149_hauto.jpeg",
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230024672.jpg",
       name: "Jujutsu Kaisen vol.3",
       author: "Gege Akutami",
       price: "30000",
     },
     {
-      img: "https://cdn.gramedia.com/uploads/items/Cover_Depan_Jujutsu_Kaisen_04__w149_hauto.jpg",
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230026942.jpg",
       name: "Jujutsu Kaisen vol.4",
       author: "Gege Akutami",
       price: "30000",
     },
     {
-      img: "https://cdn.gramedia.com/uploads/items/9786230029783_Jujutsukaisen_5__w150_hauto.jpg",
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230029783.jpg",
       name: "Jujutsu Kaisen vol.5",
       author: "Gege Akutami",
       price: "30000",
     },
     {
-      img: "https://cdn.gramedia.com/uploads/items/Jujutsukaisen_6__w142_hauto.jpg",
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230031274.jpg",
       name: "Jujutsu Kaisen vol.6",
       author: "Gege Akutami",
       price: "32000",
+    },
+    {
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230035883.jpg",
+      name: "Jujutsu Kaisen vol.7",
+      author: "Gege Akutami",
+      price: "40000",
+    },
+    {
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230036828.jpg",
+      name: "Jujutsu Kaisen vol.8",
+      author: "Gege Akutami",
+      price: "40000",
+    },
+    {
+      img: "https://elexmedia.s3.amazonaws.com/product/9786230046698.jpg",
+      name: "Jujutsu Kaisen vol.9",
+      author: "Gege Akutami",
+      price: "40000",
     },
   ];
 
