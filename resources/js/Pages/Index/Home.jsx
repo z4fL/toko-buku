@@ -30,7 +30,7 @@ const Home = ({ title }) => {
           </div>
         </div>
       </div>
-      <div className="pb-5">
+      <div className="pb-7">
         <BookCategories />
       </div>
       <div className="pb-5">

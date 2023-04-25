@@ -4,15 +4,30 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+const CustomLeftArrow = ({ onClick }) => (
+  <i onClick={() => onClick()} className="custom-left-arrow" />
+);
+const CustomRightArrow = ({ onClick }) => {
+  return <i className="custom-right-arrow" onClick={() => onClick()} />;
+};
+
 const CarouselBooks = ({ header, books }) => {
   return (
     <div className="mb-4 pb-2">
       <div className="flex justify-between items-center w-full mb-3 px-2">
-        <h2 className="text-2xl font-bold">{header}</h2>
-        <Link as="button" href="book/recomendations" className="text-sm font-bold text-sky-600">Lihat Semua</Link>
+        <h2 className="text-3xl font-bold">{header}</h2>
+        <Link
+          as="button"
+          href="book/recomendations"
+          className="text-sm font-bold text-sky-600"
+        >
+          Lihat Semua
+        </Link>
       </div>
       <Carousel
         arrows
+        // customLeftArrow={<CustomLeftArrow />}
+        // customRightArrow={<CustomRightArrow />}
         draggable
         focusOnSelect={false}
         infinite={false}
@@ -22,7 +37,7 @@ const CarouselBooks = ({ header, books }) => {
           desktop: {
             breakpoint: { max: 1536, min: 1280 },
             items: 5,
-            partialVisibilityGutter: 20,
+            partialVisibilityGutter: 10,
           },
           laptop: {
             breakpoint: { max: 1280, min: 1024 },
@@ -60,13 +75,13 @@ const CarouselBooks = ({ header, books }) => {
         {books.map((book, index) => (
           <div key={index} className="my-4">
             <div className="h-max grid place-items-center font-mono">
-              <div className="bg-white w-44 rounded-md">
+              <div className="bg-white w-52 rounded-md">
                 <Link href="#" as="button">
                   <div className="flex justify-center items-center leading-none">
                     <img
                       src={book.img}
                       alt={book.name}
-                      className="w-40 h-60 rounded-md shadow-lg bg-white mt-6 transform -translate-y-10 hover:-translate-y-4 transition duration-700"
+                      className="w-44 h-64 rounded-md shadow-lg bg-white mt-6 transform -translate-y-10 hover:-translate-y-4 transition duration-700"
                     />
                   </div>
                   <div className="p-3 pt-0">

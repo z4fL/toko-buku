@@ -23,6 +23,7 @@ return new class extends Migration
       $table->unsignedSmallInteger('page_count');
       $table->unsignedInteger('price');
       $table->unsignedInteger('stock');
+      $table->string('img_url');
       $table->timestamps();
     });
   }
