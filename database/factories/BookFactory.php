@@ -31,7 +31,8 @@ class BookFactory extends Factory
       "publish_year" => fake()->year(),
       "page_count" => fake()->randomNumber(3),
       "price" => fake()->randomNumber(2, true) . '000',
-      "stock" => fake()->randomNumber(3)
+      "stock" => fake()->randomNumber(3),
+      "img_url" => "https://source.unsplash.com/270x400?book"
     ];
   }
 

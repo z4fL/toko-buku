@@ -8,24 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { Link } from "@inertiajs/react";
 import { AppContext } from "@/context/app-context";
-
-const navigation = [
-  {
-    name: "Home",
-    href: "/",
-    current: false,
-  },
-  {
-    name: "Books",
-    href: "/book",
-    current: false,
-  },
-  {
-    name: "About",
-    href: "/about",
-    current: false,
-  },
-];
+import { navigation } from "./links";
 
 const Navbar = () => {
   const context = useContext(AppContext);
