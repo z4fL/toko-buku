@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BooksController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,23 +16,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// home routes
-Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/book', [HomeController::class, 'book'])->name('book');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
+// index routes
+Route::prefix('/')->group(function () {
+  Route::get('/', [IndexController::class, 'index'])->name('index.index');
+  Route::get('/book', [IndexController::class, 'book'])->name('index.book');
+  Route::redirect('/book', '/book/latest');
+  Route::get('/about', [IndexController::class, 'about'])->name('index.about');
+});
 
 // books routes
 Route::prefix('book')->group(function () {
-  Route::get('/recomendations', [HomeController::class, 'bookRecommendations'])->name('book.recommendations');
-  Route::get('/categories/{category}', [HomeController::class, 'bookCategories'])->name('book.categories');
+  Route::get('/category/{category}', [BooksController::class, 'bookCategories'])->name('book.categories');
+  Route::get('/recomendations', [BooksController::class, 'bookRecommendations'])->name('book.recommendations');
+  Route::get('/bestseller', [BooksController::class, 'bookBestSeller'])->name('book.bestseller');
+  Route::get('/latest', [BooksController::class, 'bookLatest'])->name('book.latest');
 });
 
-// guest routes
-Route::middleware('guest')->group(function () {
-  Route::get('/login', [AuthController::class, 'loginView'])->name('login');
-});
+// // guest routes
+// Route::middleware('guest')->group(function () {
+//   Route::get('/login', [AuthController::class, 'loginView'])->name('login');
+// });
 
-// auth routes
-Route::middleware('auth')->group(function () {
-  Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
-});
+// // auth routes
+// // Route::middleware('auth')->group(function () {
+// //   Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+// // });

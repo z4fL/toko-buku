@@ -47,7 +47,7 @@ const BookCategories = () => {
         {bookCategories.map((book, i) => (
           <div key={i} className="h-full bg-slate-50 flex justify-center">
             <div className="w-16">
-              <Link as="button" href={`/category?${book.slug}`}>
+              <Link as="button" href={`/category/${book.slug}`}>
                 <img
                   src={`https://source.unsplash.com/1000x100${i}?book ${book.slug}`}
                   className="h-full w-full max-w-[80px] max-h-[80px] object-contain object-center rounded-sm"

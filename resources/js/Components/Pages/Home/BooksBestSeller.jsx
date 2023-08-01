@@ -1,7 +1,7 @@
 import CarouselBooks from "@/Components/CarouselBooks";
 import React from "react";
 
-const BookRecommendations = () => {
+const BooksBestSeller = () => {
   const recomendedBooks = [
     {
       img: "https://elexmedia.s3.amazonaws.com/product/9786230034640.jpg",
@@ -67,9 +67,9 @@ const BookRecommendations = () => {
 
   return (
     <div className="container sm:px-2 md:px-3 lg:px-5 xl:px-14">
-      {<CarouselBooks header="Book recommendations" books={recomendedBooks} link={`/book/recomendations`} />}
+      {<CarouselBooks header="Bestseller Books" books={recomendedBooks} link={`/book/bestseller`} />}
     </div>
   );
 };
 
-export default BookRecommendations;
+export default BooksBestSeller;

@@ -11,14 +11,14 @@ const CustomRightArrow = ({ onClick }) => {
   return <i className="custom-right-arrow" onClick={() => onClick()} />;
 };
 
-const CarouselBooks = ({ header, books }) => {
+const CarouselBooks = ({ header, books, link }) => {
   return (
     <div className="mb-4 pb-2">
       <div className="flex justify-between items-center w-full mb-3 px-2">
         <h2 className="text-3xl font-bold">{header}</h2>
         <Link
           as="button"
-          href="book/recomendations"
+          href={link}
           className="text-sm font-bold text-sky-600"
         >
           Lihat Semua

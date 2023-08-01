@@ -35,6 +35,10 @@ const Footer = () => {
             </a>
           ))}
         </div>
+        <hr className="my-8 border-t border-slate-400" />
+        <div className="flex justify-center mt-8 space-x-8">
+          <span className="text-sm text-slate-200">Z4FL @ 2023</span>
+        </div>
       </div>
     </div>
   );
